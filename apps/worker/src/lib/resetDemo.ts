@@ -26,16 +26,23 @@ async function archiveAllPages(databaseId: string): Promise<number> {
 export async function resetDemo(): Promise<void> {
   const notion = getNotionClient();
 
-  // Archive all records from signal/evidence/approval/diff/concept/brief databases
+  // Archive all records from all databases including claims
   await archiveAllPages(DB_IDS.rawSignals);
   await archiveAllPages(DB_IDS.evidenceReceipts);
   await archiveAllPages(DB_IDS.approvals);
   await archiveAllPages(DB_IDS.truthDiffs);
   await archiveAllPages(DB_IDS.concepts);
   await archiveAllPages(DB_IDS.truthBriefs);
+  await archiveAllPages(DB_IDS.companyClaims);
 
-  // Reset the active claim back to green/unclear
+  // Unarchive and reset the seed claim back to green/unclear
   const claimId = getSeedClaimId();
+  await notionWrite(() =>
+    notion.pages.update({
+      page_id: claimId,
+      archived: false,
+    })
+  );
   await notionWrite(() =>
     notion.pages.update({
       page_id: claimId,
