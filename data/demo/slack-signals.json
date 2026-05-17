@@ -1,0 +1,20 @@
+{
+  "messages": [
+    {
+      "id": "slack-001",
+      "channel": "#beta-room",
+      "text": "Can we still call beta readiness green if mobile Safari is dropping people after invite accept?",
+      "author": "maya",
+      "timestamp": "2026-05-15T14:30:00Z",
+      "reactions": ["eyes", "warning"]
+    },
+    {
+      "id": "slack-002",
+      "channel": "#support",
+      "text": "Northstar hit the invite bug again. They are asking whether the security packet is actually ready.",
+      "author": "talia",
+      "timestamp": "2026-05-15T18:05:00Z",
+      "reactions": ["plus1", "rotating_light"]
+    }
+  ]
+}

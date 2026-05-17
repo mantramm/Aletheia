@@ -1,0 +1,12 @@
+node_modules/
+.next/
+.turbo/
+dist/
+*.tsbuildinfo
+
+.env
+.env.*
+!.env.example
+env
+workers.json
+workers.*.json

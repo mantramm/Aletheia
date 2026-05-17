@@ -1,0 +1,20 @@
+{
+  "pages": [
+    {
+      "id": "notion-workspace-invite-guide",
+      "title": "Workspace Invite Guide",
+      "last_edited": "2026-04-22T10:00:00Z",
+      "url": "https://notion.so/workspace-invite-guide",
+      "stale_since_pr": "pr-417",
+      "status": "stale"
+    },
+    {
+      "id": "notion-security-faq",
+      "title": "Design Partner Security FAQ",
+      "last_edited": "2026-04-18T12:10:00Z",
+      "url": "https://notion.so/design-partner-security-faq",
+      "stale_since_pr": "pr-417",
+      "status": "stale"
+    }
+  ]
+}

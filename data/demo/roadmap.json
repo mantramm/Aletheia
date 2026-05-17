@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "id": "rm-sso",
+      "feature": "SSO / Enterprise Auth for design partners",
+      "target_quarter": "Q3 2026",
+      "target_date": "2026-09-30",
+      "status": "planned",
+      "owner": "platform-team"
+    },
+    {
+      "id": "rm-workspace-invites",
+      "feature": "Workspace invite recovery after OAuth callback",
+      "target_date": "2026-05-20",
+      "status": "blocked",
+      "depends_on": ["pr-417"],
+      "marketing_live": false
+    },
+    {
+      "id": "rm-may-beta",
+      "feature": "May Beta announcement",
+      "target_date": "2026-05-21",
+      "status": "scheduled",
+      "depends_on": ["rm-workspace-invites", "rm-sso"],
+      "marketing_live": true
+    }
+  ]
+}

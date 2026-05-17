@@ -1,0 +1,22 @@
+{
+  "accounts": [
+    {
+      "id": "northstar-001",
+      "name": "Northstar Studio",
+      "arr": 72000,
+      "renewal_date": "2026-05-30",
+      "requirements": ["workspace invites", "SOC2-lite packet", "SSO direction"],
+      "csm": "sarah@mosaiclabs.co",
+      "status": "blocked"
+    },
+    {
+      "id": "atlas-002",
+      "name": "Atlas Collective",
+      "arr": 54000,
+      "renewal_date": "2026-06-07",
+      "requirements": ["SSO timeline", "data retention FAQ"],
+      "csm": "sarah@mosaiclabs.co",
+      "status": "legal_waiting"
+    }
+  ]
+}

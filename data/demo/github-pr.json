@@ -1,0 +1,10 @@
+{
+  "id": "pr-417",
+  "number": 417,
+  "title": "fix: workspace invite permissions after OAuth callback",
+  "body": "Unblocks design partner invite acceptance by tightening workspace permission boundaries after the OAuth callback flow.",
+  "merged_at": "2026-05-16T08:22:00Z",
+  "files_changed": ["apps/workspaces/permissions.ts", "apps/auth/oauth.ts"],
+  "author": "platform-team",
+  "base_branch": "main"
+}

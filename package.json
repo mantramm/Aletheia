@@ -1,0 +1,13 @@
+{
+  "name": "aletheia",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter @aletheia/web dev",
+    "build": "pnpm --filter @aletheia/web build",
+    "setup-notion": "npx tsx scripts/setup-notion.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

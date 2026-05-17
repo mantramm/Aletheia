@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Geist", system-ui, -apple-system, sans-serif;
+  --font-mono: "Geist Mono", "SF Mono", "Fira Code", monospace;
+
+  --color-warm-50: #fefdfb;
+  --color-warm-100: #fdf9f0;
+  --color-warm-200: #f5efe0;
+  --color-warm-300: #e8dcc8;
+  --color-warm-400: #c4b59a;
+  --color-warm-500: #9e8e72;
+  --color-warm-600: #7a6d56;
+  --color-warm-700: #5c5140;
+  --color-warm-800: #3d362c;
+  --color-warm-900: #1f1b16;
+  --color-warm-950: #0f0d0a;
+
+  --color-accent-green: #4ade80;
+  --color-accent-amber: #fbbf24;
+  --color-accent-red: #f87171;
+  --color-accent-blue: #60a5fa;
+
+  --color-surface: #1a1714;
+  --color-surface-raised: #242019;
+  --color-surface-overlay: #2e2a22;
+  --color-border-subtle: #3d362c;
+
+  --color-foreground: #fefdfb;
+  --color-background: #1a1714;
+
+  --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
+}
+
+@keyframes spotlight {
+  0% {
+    opacity: 0;
+    transform: translate(-72%, -62%) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -40%) scale(1);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-warm-200);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: #fbbf2433;
+  color: #fefdfb;
+}

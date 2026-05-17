@@ -1,0 +1,131 @@
+{
+  "status": "red",
+  "activeClaim": {
+    "id": "claim-may-beta-readiness",
+    "text": "May Beta Readiness is green.",
+    "verdict": "contradicted"
+  },
+  "signals": [
+    {
+      "id": "metric-beta-activation-27",
+      "source": "crm",
+      "type": "metric_miss",
+      "label": "Activation is 27% against 40% target",
+      "summary": "Beta activation is 27%; mobile Safari OAuth drop-off is 41%; 9 of 33 invited teams reached a shared workspace.",
+      "timestamp": "2026-05-15T17:00:00Z",
+      "severity": "high"
+    },
+    {
+      "id": "support-invite-failures",
+      "source": "slack",
+      "type": "support_escalation",
+      "label": "Invite failures spiked across design partners",
+      "summary": "Support logged 14 invite failure tickets in 5 days, including 6 from design partners blocked after OAuth redirect.",
+      "timestamp": "2026-05-14T20:20:00Z",
+      "severity": "high"
+    },
+    {
+      "id": "roadmap-sso-q3",
+      "source": "roadmap",
+      "type": "dependency_conflict",
+      "label": "SSO is planned for Q3, not May beta",
+      "summary": "Roadmap shows SSO / Enterprise Auth target date as 2026-09-30 while May beta security copy implies near-term readiness.",
+      "timestamp": "2026-05-10T11:00:00Z",
+      "severity": "high"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "concept-may-beta-readiness",
+      "title": "May Beta Readiness",
+      "stage": "needs_decision",
+      "supportingSignalIds": ["metric-beta-activation-27", "support-invite-failures"]
+    },
+    {
+      "id": "concept-activation-sprint",
+      "title": "Activation Sprint",
+      "stage": "needs_decision",
+      "supportingSignalIds": ["support-invite-failures", "github-pr-417"]
+    },
+    {
+      "id": "concept-trust-security",
+      "title": "Trust & Security Readiness",
+      "stage": "needs_decision",
+      "supportingSignalIds": ["customer-northstar-studio", "roadmap-sso-q3"]
+    }
+  ],
+  "truthDiff": {
+    "belief": [
+      "May Beta Readiness is green.",
+      "Activation and onboarding blockers are under control."
+    ],
+    "reality": [
+      "Activation is 27% against a 40% target.",
+      "Mobile Safari OAuth drop-off is 41%.",
+      "Design partners are still blocked by workspace invite failures."
+    ],
+    "verdict": "contradicted",
+    "recommendedActions": [
+      "Move May Beta Readiness to at-risk.",
+      "Escalate the workspace invite fix before the next beta cohort email.",
+      "Publish a design partner update before founder review."
+    ]
+  },
+  "evidence": [
+    {
+      "id": "evidence-activation-27",
+      "source": "crm",
+      "title": "Activation is 27% against 40% target",
+      "summary": "Beta activation is 27%; mobile Safari OAuth drop-off is 41%; 9 of 33 invited teams reached a shared workspace.",
+      "severity": "high",
+      "notionUrl": "https://notion.so/evidence-activation-27"
+    },
+    {
+      "id": "evidence-invite-failures",
+      "source": "slack",
+      "title": "Invite failures spiked across design partners",
+      "summary": "Support logged 14 invite failure tickets in 5 days, including 6 from design partners blocked after OAuth redirect.",
+      "severity": "high",
+      "notionUrl": "https://notion.so/evidence-invite-failures"
+    },
+    {
+      "id": "evidence-northstar",
+      "source": "crm",
+      "title": "Northstar Studio blocked on invites and SOC2-lite packet",
+      "summary": "Northstar Studio is a $72k ARR design partner waiting on workspace invites, SSO direction, and the SOC2-lite security packet.",
+      "severity": "high",
+      "notionUrl": "https://notion.so/evidence-northstar"
+    }
+  ],
+  "approvals": [
+    {
+      "id": "approval-beta-at-risk",
+      "action": "Move May Beta Readiness from green to at-risk until activation recovers.",
+      "riskLevel": "high",
+      "status": "needs_approval",
+      "evidenceIds": ["evidence-activation-27"]
+    },
+    {
+      "id": "approval-pr-417",
+      "action": "Prioritize PR #417 and block activation sprint sign-off until merged.",
+      "riskLevel": "high",
+      "status": "needs_approval",
+      "evidenceIds": ["evidence-invite-failures"]
+    }
+  ],
+  "syncLog": [],
+  "trial": {
+    "title": "The People vs. May Beta Readiness",
+    "charges": [
+      "Calling beta readiness green while activation is below target.",
+      "Declaring onboarding solved while invite failures block design partners.",
+      "Claiming trust readiness while security docs and SSO timing are unresolved."
+    ],
+    "verdict": "Guilty of premature confidence.",
+    "sentence": [
+      "Move beta readiness to at-risk.",
+      "Escalate the workspace invite fix.",
+      "Send design partners a trust readiness update."
+    ]
+  }
+}
